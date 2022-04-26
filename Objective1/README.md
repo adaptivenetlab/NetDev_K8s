@@ -35,14 +35,14 @@ kubectl apply -f 3.\ phpapache-svc.yaml -n netdev
 ```
 
 - For Ingress
-
-    - Deploy MetaLLB first for Nginx Ingress Purposes
+- Deploy MetaLLB first for Nginx Ingress Purposes
 ```
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.11.0/manifests/namespace.yaml
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.11.0/manifests/metallb.yaml
 kubectl apply -f 3.\ metallb-confmap.yaml -n metallb-system
 ```
-    - Deploy Nginx Ingress with Helm
+- Deploy Nginx Ingress with Helm
+    
 ```
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod 700 get_helm.sh
@@ -52,8 +52,8 @@ helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 kubectl create ns ingress-nginx
 helm install myingress ingress-nginx/ingress-nginx -n ingress-nginx
 ```
-
-    - Deploy rule path Ingress on http://hpa.netdev.com
+- Deploy rule path Ingress on http://hpa.netdev.com
+    
 ```
 kubectl apply -f 2.\ phpapache-ing.yaml -n netdev
 ```
