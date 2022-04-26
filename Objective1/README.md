@@ -91,6 +91,4 @@ POD will be decrease to some SMALL number of replicas.
 ```
 
 ## 8. Conclusion
-```
 Kubernetes dapat mensupport bisnis ke model yang sangat fleksibel, karena kekuatan replikasi yang menyebabkan High Availability dari setiap paradigma nya (disini auto scale pada POD).
-```
