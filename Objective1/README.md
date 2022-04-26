@@ -31,7 +31,7 @@ kubectl apply -f 2.\ phpapache-depl.yaml -n netdev
 ## 3. Deployment Service Cluster IP & Ingress
 - For Cluster IP
 ```
-kubectl apply -f 2.\ phpapache-svc.yaml -n netdev
+kubectl apply -f 3.\ phpapache-svc.yaml -n netdev
 ```
 
 - For Ingress
@@ -40,7 +40,7 @@ kubectl apply -f 2.\ phpapache-svc.yaml -n netdev
 ```
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.11.0/manifests/namespace.yaml
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.11.0/manifests/metallb.yaml
-kubectl apply -f 3. metallb-confmap.yaml -n metallb-system
+kubectl apply -f 3.\ metallb-confmap.yaml -n metallb-system
 ```
     - Deploy Nginx Ingress with Helm
 ```
