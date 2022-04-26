@@ -21,6 +21,7 @@ Kubernetes Cluster v1.21.9 from KubeSpray Hosted on Ubuntu Server 20.04LTS on VM
 ```
 https://gist.github.com/gilangvperdana/886bc80cefdcd1be7ea356e41fa2871d
 ```
+![](./docs/img/image1.png)
 
 ## 2. Deployment some Apps
 ```
@@ -60,35 +61,46 @@ kubectl apply -f 3.\ phpapache-ing.yaml -n netdev
 
 ## 4. Turn on HPA for php-apache deployment
 ```
-kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+kubectl patch deployment metrics-server -n kube-system --type 'json' -p '[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--kubelet-insecure-tls"}]'
+
+kubectl autoscale deployment php-apache --cpu-percent=20 --min=1 --max=10 -n netdev
+kubectl get hpa -n netdev
 ```
 
-## 5. Test load with BusyBox Image
+## 5. Test load with Siege
 - Make sure you was declare hpa.netdev.com on /etc/hosts:
 ```
 kubectl get all -n igress-nginx
 nano /etc/hosts
+
 ---
 {ip_external_nginx_ingress} hpa.netdev.com
 ---
 ```
 
-- Test with Busy Box to hpa.netdev.com
+- Test with Siege to hpa.netdev.com
 ```
-kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://hpa.netdev.com; done"
+apt install -y siege
+siege hpa.netdev.com
 ```
+![](./docs/img/image2.png)
 
 ## 6. POD on High Load
 ```
-Keep RUN your Busy Box Image and,
+Keep RUN your Siege and,
 Pod will be increase to some BIG number of replicas.
 ```
+![](./docs/img/image3.png)
 
 ## 7. POD on Low Load
 ```
-Stop your Busy Box Image and,
+Stop your Siege and,
 POD will be decrease to some SMALL number of replicas.
+Usually will be Scale Replicas down 300second from reduced requests.
 ```
+![](./docs/img/image4.png)
+![](./docs/img/image5.png)
 
 ## 8. Conclusion
 Kubernetes dapat mensupport bisnis ke model yang sangat fleksibel, karena kekuatan replikasi yang menyebabkan High Availability dari setiap paradigma nya (disini auto scale pada POD).
