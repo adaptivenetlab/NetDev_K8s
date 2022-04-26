@@ -55,7 +55,7 @@ helm install myingress ingress-nginx/ingress-nginx -n ingress-nginx
 - Deploy rule path Ingress on http://hpa.netdev.com
     
 ```
-kubectl apply -f 2.\ phpapache-ing.yaml -n netdev
+kubectl apply -f 3.\ phpapache-ing.yaml -n netdev
 ```
 
 ## 4. Turn on HPA for php-apache deployment
