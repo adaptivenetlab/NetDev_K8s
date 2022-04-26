@@ -84,7 +84,6 @@ nano /etc/hosts
 apt install -y siege
 siege hpa.netdev.com
 ```
-![](./docs/img/image2.png)
 
 ## 6. POD on High Load
 ```
