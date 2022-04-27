@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-one
+  labels:
+    app: nginx-one
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-one
+  template:
+    metadata:
+      labels:
+        app: nginx-one
+    spec:
+      containers:
+      - name: deploy-one
+        image: nginx
+        ports:
+          - containerPort: 80
+            name: "http-server"
+        volumeMounts:
+          - mountPath: "/usr/share/nginx/html"
+            name: container-storage
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
+      volumes:
+      - name: container-storage
+        persistentVolumeClaim:
+          claimName: netdev-pv-claim
