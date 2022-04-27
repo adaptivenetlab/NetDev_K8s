@@ -35,9 +35,10 @@
 ## [Objective 2](./Objective2)
 
 - Install Kubernetes menggunakan Kubeadm/Kubespray di 2VM (1 Master dan 1 Worker) => Boleh virtualBox/Proxmox/VMware ataupun public cloud seperti GCP/AWS/Azure.
-- Buat deployment database postgress dengan username netdev dan password netdev123, lalu expose deployment tersebut menggunakan tipe cluster IP.
+- Install metallb sebagai loadbalancer untuk mengekspose applikasi wordpress
+- Buat deployment database mysql dengan user `root` memiliki password `netdev123` lalu buat database bernama `wordpress` setelah itu expose deployment tersebut menggunakan tipe cluster IP.
 - buat deployment wordpress dan konfigurasi database wordpress untuk menggunakan database yang dibuat sebelumnya.
-- install nginx ingress, lalu konfigurasi agar bisa mengakses wordpress menggunakan ingress tersebut.
+- Ekspos wordpress tersebut menggunakan loadbalancer
 
 
 ## [Objective 3](./Objective3)
