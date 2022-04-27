@@ -85,4 +85,14 @@ kubectl apply -f 3.\ PromGrafana-ing.yaml -n monitoring
 - Finnish Integrate Grafana with Slack
 
 ## 6. Triger Allerting with make a new Deployment
-- To be Research
+- Import Dashboard with code `8685`
+![](./docs/img/image12.png)
+
+- Monitor Graph Cluster Disk Capacity (for Example)
+![](./docs/img/image13.png)
+
+- Edit, goes to `Alert` then configure threshold,etc
+![](./docs/img/image14.png)
+
+- Try to deploy some deployment, then delete (to Trigger disk space and then alerting will send to Slack)
+![](./docs/img/image15.png)
