@@ -45,7 +45,7 @@
 - Install metallb sebagai loadbalancer untuk mengekspose aplikasi
 - Buat Volume tipe hostpath dengan nama `mysql-volume` dan disimpan di path `/opt/netdev/mysql`
 - Buat deployment database mysql dengan user `root` memiliki password `netdev123` yang diambil dari kubernetes secret, lalu buat database bernama `wordpress` setelah itu expose deployment tersebut menggunakan tipe ClusterIP dan juga jangan lupa mount `mysql-volume` yang dibuat ke deployment tersebut
-- Buat Volume tipe hostpath dengan nama `wordpress-volume` dan disimpan di path `/opt/netdev/mysql`'
+- Buat Volume tipe hostpath dengan nama `wordpress-volume` dan disimpan di path `/opt/netdev/wordpress`'
 - Buat deployment wordpress dan konfigurasi database wordpress untuk menggunakan database yang dibuat sebelumnya jangan lupa untuk mount `wordpress-volume` ke deployment yang dibuat.
 - Ekspos wordpress tersebut menggunakan service dengan tipe LoadBalancer
 - pastikan bisa mengakses aplikasi wordpress tersebut dari IP LoadBalancer!
