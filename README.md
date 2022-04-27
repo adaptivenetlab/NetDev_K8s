@@ -7,7 +7,7 @@
 |  Shevira Feby Christavia|  Minggu 4 #1|
 |  Rafsanjani Nurul Irsyad|  Minggu 4 #1|
 |  Rayhan Aziz Budiana|  Minggu 4 #1|
-|**KELOMPOK 2**|**MINGGU 2**|
+|**KELOMPOK 2**|**MINGGU 4**|
 |  Salwa Aulia Farida Yudistira|  Minggu 4 #2|
 |  Arga Valen Lazuardi|  Minggu 4 #2|
 |  Xavier Samuel Muhammad Fidel Piljai|  Minggu 4 #2|
