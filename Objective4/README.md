@@ -96,3 +96,6 @@ kubectl apply -f 3.\ PromGrafana-ing.yaml -n monitoring
 
 - Try to deploy some deployment, then delete (to Trigger disk space and then alerting will send to Slack)
 ![](./docs/img/image15.png)
+
+# Simplicity
+You can use Kube Watcher to simplicity your pipeline, installation can be seen on [here!](./KubeWatch.md)
