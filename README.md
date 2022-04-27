@@ -1,6 +1,6 @@
 # Net Development Kubernetes Path
 
-## Objective 1
+## [Objective 1](./Objective1)
 
 - Install Kubernetes menggunakan Kubeadm/Kubespray di 2VM (1 Master dan 1 Worker) => Boleh virtualBox/Proxmox/VMware ataupun public cloud seperti GCP/AWS/Azure.
 - Buat deployment aplikasi bebas, boleh nginx/apache/dsb.
@@ -12,7 +12,7 @@
 - Simpulkan dan jelaskan apa yang terjadi.
 
 
-## Objective 2
+## [Objective 2](./Objective2)
 
 - Install Kubernetes menggunakan Kubeadm/Kubespray di 2VM (1 Master dan 1 Worker) => Boleh virtualBox/Proxmox/VMware ataupun public cloud seperti GCP/AWS/Azure.
 - Buat deployment database postgress dengan username netdev dan password netdev123, lalu expose deployment tersebut menggunakan tipe cluster IP.
@@ -20,7 +20,7 @@
 - install nginx ingress, lalu konfigurasi agar bisa mengakses wordpress menggunakan ingress tersebut.
 
 
-## Objective 3
+## [Objective 3](./Objective3)
 
 - Install Kubernetes menggunakan Kubeadm/Kubespray di 2VM (1 Master dan 1 Worker) => Boleh virtualBox/Proxmox/VMware ataupun public cloud seperti GCP/AWS/Azure.
 - Buat Volume tipe hostpath dan disimpan di path /opt/netdev.
@@ -38,9 +38,8 @@
 - Buat satu namespace bernama netdev, lalu buat deployment dengan nama deploy-two menggunakan image nginxdemos/hello lalu expose deployment tersebut dengan service tipe ClusterIP.
 - Masuk ke pod deployment deploy-one lalu dan akses pod deplyment deploy-two menggunakan alamat ClusterIP yang sebelumnya dibuat.
 
+## [Objective 4](./Objective4)
 
-
-## Objective 4
 - Install Kubernetes menggunakan Kubeadm/Kubespray di 2VM (1 Master dan 1 Worker) => Boleh virtualBox/Proxmox/VMware ataupun public cloud seperti GCP/AWS/Azure.
 - Buat deployment aplikasi monitoring, Prometheus & Grafana.
 - Buat service berbentuk cluster IP (Prometheus & Grafana) dan Ingress menggunakan Nginx Ingress untuk aplikasi monitoring (Grafana).
