@@ -35,6 +35,12 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm show values bitnami/kubewatch > ~/kubewatch.yaml
 ```
 
+- Configure Slack BOT
+```
+https://my.slack.com/services/new/bot
+Create a new BOT, then copy API TOKEN
+```
+
 - Configure KubeWatch
 ```
 nano ~/kubewatch.yaml
@@ -43,14 +49,21 @@ nano ~/kubewatch.yaml
 slack:
   enabled: true
   channel: "your_channel_slack_name"
-  token: "your_apps_bot_token"
+  token: "your_API_TOKEN_bot"
 ```
 ```
 rbac:
   create: true
 ```
 ```
-helm install my-kubewatch bitnami/kubewatch --values ~/kubewatch.yaml
+kubectl create ns monitoring
+helm install my-kubewatch bitnami/kubewatch --values ~/kubewatch.yaml -n monitoring
 ```
 
-- To Be Research
+## 3-5 Same with README.md
+
+## 6. Alerting Test
+```
+kubectl create deployment nginx-web --image=gilangvperdana/apps:rlinear
+```
+![](./docs/img/image-kubewatch.png)
