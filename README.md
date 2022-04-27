@@ -11,11 +11,11 @@
 |  Salwa Aulia Farida Yudistira|  Minggu 4 #2|
 |  Arga Valen Lazuardi|  Minggu 4 #2|
 |  Xavier Samuel Muhammad Fidel Piljai|  Minggu 4 #2|
-|**KELOMPOK 1**|**MINGGU 5**|
+|**KELOMPOK 3**|**MINGGU 5**|
 | Muhammad Litfan Rahmansyah |  Minggu 5 #1|
 | Faishal Dzaki Ferdiansyah |  Minggu 5 #1|
 | Rashid Muhammad Fajri |  Minggu 5 #1|
-|**KELOMPOK 2**|**MINGGU 5**|
+|**KELOMPOK 4**|**MINGGU 5**|
 |  Syekh Maulana Wijaya|  Minggu 5 #2|
 |  Salman Alfarizi Novel Bajri|  Minggu 5 #2|
 |  Faishal Yusuf Baqir|  Minggu 5 #2|
