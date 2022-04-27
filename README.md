@@ -1,5 +1,25 @@
 # Net Development Kubernetes Path
 
+## TeamMate
+| Anggota|  Minggu|
+|--|--|
+|**MINGGU 4**|**KELOMPOK 1**|
+|  Shevira Feby Christavia|  Minggu 4 #1|
+|  Rafsanjani Nurul Irsyad|  Minggu 4 #1|
+|  Rayhan Aziz Budiana|  Minggu 4 #1|
+|**MINGGU 4**|**KELOMPOK 2**|
+|  Salwa Aulia Farida Yudistira|  Minggu 4 #2|
+|  Arga Valen Lazuardi|  Minggu 4 #2|
+|  Xavier Samuel Muhammad Fidel Piljai|  Minggu 4 #2|
+|**MINGGU 5**|**KELOMPOK 1**|
+| Muhammad Litfan Rahmansyah |  Minggu 5 #1|
+| Faishal Dzaki Ferdiansyah |  Minggu 5 #1|
+| Rashid Muhammad Fajri |  Minggu 5 #1|
+|**MINGGU 5**|**KELOMPOK 2**|
+|  Syekh Maulana Wijaya|  Minggu 5 #2|
+|  Salman Alfarizi Novel Bajri|  Minggu 5 #2|
+|  Faishal Yusuf Baqir|  Minggu 5 #2|
+
 ## [Objective 1](./Objective1)
 
 - Install Kubernetes menggunakan Kubeadm/Kubespray di 2VM (1 Master dan 1 Worker) => Boleh virtualBox/Proxmox/VMware ataupun public cloud seperti GCP/AWS/Azure.
@@ -44,5 +64,5 @@
 - Buat deployment aplikasi monitoring, Prometheus & Grafana.
 - Buat service berbentuk cluster IP (Prometheus & Grafana) dan Ingress menggunakan Nginx Ingress untuk aplikasi monitoring (Grafana).
 - Buka dashboard grafana lewat endpoint ingress dan monitor kubernetes Cluster dari Grafana.
-- Buat alerting ke Slack dari Grafana
-- Coba buat deployment baru (bebas, bisa nginx/apache/dll) untuk men-trigger alerting ke slack
+- Buat alerting ke Slack dari Grafana `OPTIONAL`
+- Coba buat deployment baru (bebas, bisa nginx/apache/dll) untuk men-trigger alerting ke slack `OPTIONAL`
