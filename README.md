@@ -20,6 +20,13 @@
 |  Salman Alfarizi Novel Bajri|  Minggu 5 #2|
 |  Faishal Yusuf Baqir|  Minggu 5 #2|
 
+|KELOMPOK  | BAGIAN|
+|--|--|
+| KELOMPOK 1 |  [Objective 4](./Objective4)|
+| KELOMPOK 2 |  [Objective 2](./Objective2)|
+| KELOMPOK 3 |  [Objective 3](./Objective3)|
+| KELOMPOK 4 |  [Objective 1](./Objective1)|
+
 ## [Objective 1](./Objective1)
 
 - Install Kubernetes menggunakan Kubeadm/Kubespray di 2VM (1 Master dan 1 Worker) => Boleh virtualBox/Proxmox/VMware ataupun public cloud seperti GCP/AWS/Azure.
