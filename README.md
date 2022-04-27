@@ -35,10 +35,14 @@
 ## [Objective 2](./Objective2)
 
 - Install Kubernetes menggunakan Kubeadm/Kubespray di 2VM (1 Master dan 1 Worker) => Boleh virtualBox/Proxmox/VMware ataupun public cloud seperti GCP/AWS/Azure.
-- Install metallb sebagai loadbalancer untuk mengekspose applikasi wordpress
-- Buat deployment database mysql dengan user `root` memiliki password `netdev123` lalu buat database bernama `wordpress` setelah itu expose deployment tersebut menggunakan tipe cluster IP.
-- buat deployment wordpress dan konfigurasi database wordpress untuk menggunakan database yang dibuat sebelumnya.
-- Ekspos wordpress tersebut menggunakan loadbalancer
+- Install metallb sebagai loadbalancer untuk mengekspose aplikasi
+- Buat Volume tipe hostpath dengan nama `mysql-volume` dan disimpan di path `/opt/netdev/mysql`
+- Buat deployment database mysql dengan user `root` memiliki password `netdev123` yang diambil dari kubernetes secret, lalu buat database bernama `wordpress` setelah itu expose deployment tersebut menggunakan tipe ClusterIP dan juga jangan lupa mount `mysql-volume` yang dibuat ke deployment tersebut
+- Buat Volume tipe hostpath dengan nama `wordpress-volume` dan disimpan di path `/opt/netdev/mysql`'
+- Buat deployment wordpress dan konfigurasi database wordpress untuk menggunakan database yang dibuat sebelumnya jangan lupa untuk mount `wordpress-volume` ke deployment yang dibuat.
+- Ekspos wordpress tersebut menggunakan service dengan tipe LoadBalancer
+- pastikan bisa mengakses aplikasi wordpress tersebut dari IP LoadBalancer!
+
 
 
 ## [Objective 3](./Objective3)

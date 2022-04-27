@@ -8,10 +8,13 @@ Kubernetes Cluster v1.21.9 from Kubeadm Hosted on Ubuntu Server 20.04 LTS on Vir
 ## Task
 
 1. Install Kubernetes menggunakan Kubeadm/Kubespray di 2VM (1 Master dan 1 Worker) => Boleh virtualBox/Proxmox/VMware ataupun public cloud seperti GCP/AWS/Azure.
-2. Install metallb sebagai loadbalancer untuk mengekspose applikasi wordpress
-3. Buat deployment database mysql dengan user `root` memiliki password `netdev123` lalu buat database bernama `wordpress` setelah itu expose deployment tersebut menggunakan tipe cluster IP.
-4. buat deployment wordpress dan konfigurasi database wordpress untuk menggunakan database yang dibuat sebelumnya.
-5. Ekspos wordpress tersebut menggunakan loadbalancer
+2. Install metallb sebagai loadbalancer untuk mengekspose aplikasi
+3. Buat Volume tipe hostpath dengan nama `mysql-volume` dan disimpan di path `/opt/netdev/mysql`'
+4. Buat deployment database mysql dengan user `root` memiliki password `netdev123` yang diambil dari kubernetes secret, lalu buat database bernama `wordpress` setelah itu expose deployment tersebut menggunakan tipe ClusterIP dan juga jangan lupa mount `mysql-volume` yang dibuat ke deployment tersebut
+5. Buat Volume tipe hostpath dengan nama `wordpress-volume` dan disimpan di path `/opt/netdev/mysql`'
+6. Buat deployment wordpress dan konfigurasi database wordpress untuk menggunakan database yang dibuat sebelumnya jangan lupa untuk mount `wordpress-volume` ke deployment yang dibuat.
+7. Ekspos wordpress tersebut menggunakan service dengan tipe LoadBalancer
+8. pastikan bisa mengakses aplikasi wordpress tersebut dari IP LoadBalancer!
 
 
 ## Cheat Sheet
