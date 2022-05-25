@@ -28,7 +28,7 @@
 | KELOMPOK 4 |  [Objective 1](./Objective1)|
 
 ## [Objective 1](./Objective1)
-
+Powered by [GGG](https://github.com/gilangvperdana)
 - Install Kubernetes menggunakan Kubeadm/Kubespray di 2VM (1 Master dan 1 Worker) => Boleh virtualBox/Proxmox/VMware ataupun public cloud seperti GCP/AWS/Azure.
 - Buat deployment aplikasi bebas, boleh nginx/apache/dsb.
 - Buat service berbentuk cluster IP dan Ingress menggunakan Nginx Ingress.
@@ -40,7 +40,7 @@
 
 
 ## [Objective 2](./Objective2)
-
+Powered by [NTN](https://github.com/launathiel)
 - Install Kubernetes menggunakan Kubeadm/Kubespray di 2VM (1 Master dan 1 Worker) => Boleh virtualBox/Proxmox/VMware ataupun public cloud seperti GCP/AWS/Azure.
 - Install metallb sebagai loadbalancer untuk mengekspose aplikasi
 - Buat Volume tipe hostpath dengan nama `mysql-volume` dan disimpan di path `/opt/netdev/mysql`
@@ -53,7 +53,7 @@
 
 
 ## [Objective 3](./Objective3)
-
+Powered by [NTN](https://github.com/launathiel)
 - Install Kubernetes menggunakan Kubeadm/Kubespray di 2VM (1 Master dan 1 Worker) => Boleh virtualBox/Proxmox/VMware ataupun public cloud seperti GCP/AWS/Azure.
 - Buat Volume tipe hostpath dan disimpan di path /opt/netdev.
 - Buat deployment dengan nama deploy-one menggunakan image nginx:latest, lalu expose deployment tersebut dengan tipe Nodeport ( port = 32123)
@@ -71,7 +71,7 @@
 - Masuk ke pod deployment deploy-one lalu dan akses pod deplyment deploy-two menggunakan alamat ClusterIP yang sebelumnya dibuat.
 
 ## [Objective 4](./Objective4)
-
+Powered by [GGG](https://github.com/gilangvperdana)
 - Install Kubernetes menggunakan Kubeadm/Kubespray di 2VM (1 Master dan 1 Worker) => Boleh virtualBox/Proxmox/VMware ataupun public cloud seperti GCP/AWS/Azure.
 - Buat deployment aplikasi monitoring, Prometheus & Grafana.
 - Buat service berbentuk cluster IP (Prometheus & Grafana) dan Ingress menggunakan Nginx Ingress untuk aplikasi monitoring (Grafana).
